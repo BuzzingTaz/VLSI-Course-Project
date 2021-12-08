@@ -1,0 +1,51 @@
+* SPICE3 file created from or5.ext - technology: scmos
+
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.option scale=0.09u
+.global vdd gnd
+
+Vdd vdd gnd SUPPLY
+vA0 A gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vA1 B gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vA2 C gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vA3 D gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vB0 E gnd pulse 0 1.8 0us 100ps 100ps 19.8us 40us
+
+
+M1000 a_33_n36# C gnd Gnd CMOSN w=4 l=2
++  ad=32 pd=24 as=104 ps=84
+M1001 a_33_9# C a_23_9# w_0_3# CMOSP w=8 l=2
++  ad=64 pd=32 as=64 ps=32
+M1002 gnd B a_13_n36# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=56 ps=44
+M1003 a_13_n36# A gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1004 a_23_9# B a_13_9# w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1005 a_13_n36# E a_43_9# w_0_3# CMOSP w=8 l=2
++  ad=48 pd=28 as=64 ps=32
+M1006 orout a_13_n36# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1007 a_13_9# A vdd w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=80 ps=52
+M1008 orout a_13_n36# vdd w_0_3# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1009 a_13_n36# E gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 a_43_9# D a_33_9# w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 gnd D a_33_n36# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+
+.tran 0.1u 80u
+
+.control
+run
+plot v(A)
+plot v(B)
+
+plot  v(orout)
+
+.endc
+.end

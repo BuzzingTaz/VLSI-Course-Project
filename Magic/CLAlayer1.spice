@@ -1,0 +1,63 @@
+* SPICE3 file created from CLAlayer1.ext - technology: scmos
+
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.option scale=0.09u
+.global vdd gnd
+
+Vdd vdd gnd SUPPLY
+vA0 P0 gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vA1 P1 gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vA2 P2 gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vA3 P3 gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vB0 G0 gnd pulse 0 1.8 0us 100ps 100ps 19.8us 40us
+vB1 G1 gnd pulse 0 1.8 0us 100ps 100ps 19.8us 40us
+vB2 G2 gnd pulse 0 1.8 0us 100ps 100ps 19.8us 40us
+vB3 G3 gnd pulse 0 1.8 0us 100ps 100ps 19.8us 40us
+vC0 C0 gnd pulse 0 1.8 0us 100ps 100ps 19.6us 40us
+
+M1000 or_0/B and_0/a_13_9# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=100 ps=90
+M1001 vdd C0 and_0/a_13_9# and_0/w_0_3# CMOSP w=8 l=2
++  ad=200 pd=130 as=64 ps=32
+M1002 and_0/a_13_9# C0 and_0/a_13_n15# Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=32 ps=24
+M1003 and_0/a_13_9# P0 vdd and_0/w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1004 and_0/a_13_n15# P0 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 or_0/B and_0/a_13_9# vdd and_0/w_0_3# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1006 C1 or_0/a_13_n15# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1007 or_0/a_13_n15# or_0/B or_0/a_13_9# or_0/w_0_3# CMOSP w=8 l=2
++  ad=40 pd=26 as=64 ps=32
+M1008 gnd or_0/B or_0/a_13_n15# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1009 or_0/a_13_9# G0 vdd or_0/w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 or_0/a_13_n15# G0 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 C1 or_0/a_13_n15# vdd or_0/w_0_3# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+
+.tran 0.1u 80us
+.control
+run
+
+plot v(P0)
+plot v(G0)
+
+plot v(P1)
+plot v(G1)
+
+plot v(P2)
+plot  v(P3)
+
+plot v(C0)
+plot v(C1)
+plot v(C2)
+plot v(C3)
+
+.endc
+.end

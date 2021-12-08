@@ -1,0 +1,47 @@
+* SPICE3 file created from or4.ext - technology: scmos
+
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.option scale=0.09u
+.global vdd gnd
+
+Vdd vdd gnd SUPPLY
+Va A gnd pulse 0 1.8 0ns 0.1ns 0.1ns 9.9ns 20ns
+Vb B gnd pulse 0 1.8 0ns 0.1ns 0.1ns 19.9ns 40ns
+Vc C gnd pulse 0 1.8 0ns 0.1ns 0.1ns 39.9ns 80ns
+Vd D gnd pulse 0 1.8 0ns 0.1ns 0.1ns 79.9ns 160ns
+
+M1000 gnd B a_13_n31# Gnd CMOSN w=4 l=2
++  ad=96 pd=80 as=32 ps=24
+M1001 orout a_13_n31# vdd w_0_3# CMOSP w=8 l=2
++  ad=40 pd=26 as=80 ps=52
+M1002 a_33_9# C a_23_9# w_0_3# CMOSP w=8 l=2
++  ad=64 pd=32 as=64 ps=32
+M1003 a_13_n31# A gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1004 a_23_9# B a_13_9# w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1005 orout a_13_n31# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1006 a_13_9# A vdd w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 gnd D a_33_n31# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1008 a_13_n31# D a_33_9# w_0_3# CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1009 a_33_n31# C gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+
+
+.tran 1n 160ns
+
+.control
+run
+plot v(A)
+plot v(B)
+plot v(C)
+plot v(D)
+plot v(orout)
+
+.endc
+.end

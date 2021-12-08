@@ -1,0 +1,24 @@
+* SPICE3 file created from and4.ext - technology: scmos
+
+.option scale=0.09u
+
+M1000 a_14_6# D a_34_n32# Gnd nfet w=4 l=2
++  ad=24 pd=20 as=32 ps=24
+M1001 vdd B a_14_6# w_0_0# pfet w=8 l=2
++  ad=200 pd=114 as=128 ps=64
+M1002 a_34_n32# C a_24_n32# Gnd nfet w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1003 a_24_n32# B a_14_n32# Gnd nfet w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1004 a_14_6# A vdd w_0_0# pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 a_14_n32# A gnd Gnd nfet w=4 l=2
++  ad=0 pd=0 as=44 ps=38
+M1006 vdd D a_14_6# w_0_0# pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 out a_14_6# vdd w_0_0# pfet w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1008 a_14_6# C vdd w_0_0# pfet w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 out a_14_6# gnd Gnd nfet w=4 l=2
++  ad=20 pd=18 as=0 ps=0

@@ -1,0 +1,99 @@
+magic
+tech scmos
+timestamp 1638824961
+<< metal1 >>
+rect -28 83 359 87
+rect 472 65 485 69
+rect 463 57 485 61
+rect 454 49 485 53
+rect -7 44 2 48
+rect 113 44 124 48
+rect 233 44 240 48
+rect 350 44 357 48
+rect 88 37 91 41
+rect 207 37 212 41
+rect 325 37 330 41
+rect 444 37 485 41
+rect 1 29 4 33
+rect -28 0 361 4
+rect -28 -11 -13 -7
+rect -28 -19 107 -15
+rect -28 -27 227 -23
+rect -28 -35 344 -31
+rect -28 -48 -5 -44
+rect -28 -56 116 -52
+rect -28 -64 236 -60
+rect -28 -72 353 -68
+<< m2contact >>
+rect 467 65 472 70
+rect 458 57 463 62
+rect 449 49 454 54
+rect -12 43 -7 48
+rect 108 43 113 48
+rect 228 43 233 48
+rect 345 43 350 48
+rect 91 37 96 42
+rect 212 37 217 42
+rect 330 37 335 42
+rect -4 28 1 33
+rect 117 28 122 33
+rect 237 28 242 33
+rect 354 28 359 33
+rect -13 -11 -8 -6
+rect 107 -19 112 -14
+rect 227 -27 232 -22
+rect 344 -35 349 -30
+rect -5 -48 0 -43
+rect 116 -56 121 -51
+rect 236 -64 241 -59
+rect 353 -72 358 -67
+<< metal2 >>
+rect 92 105 471 109
+rect -12 -6 -8 43
+rect 92 42 96 105
+rect 213 97 462 101
+rect -4 -43 0 28
+rect 108 -14 112 43
+rect 213 42 217 97
+rect 331 89 453 93
+rect 117 -51 121 28
+rect 228 -22 232 43
+rect 331 42 335 89
+rect 449 54 453 89
+rect 458 62 462 97
+rect 467 70 471 105
+rect 237 -59 241 28
+rect 345 -30 349 43
+rect 354 -67 358 28
+use xor  xor_0
+timestamp 1638611591
+transform 1 0 35 0 1 56
+box -35 -56 57 31
+use xor  xor_1
+timestamp 1638611591
+transform 1 0 154 0 1 56
+box -35 -56 57 31
+use xor  xor_2
+timestamp 1638611591
+transform 1 0 272 0 1 56
+box -35 -56 57 31
+use xor  xor_3
+timestamp 1638611591
+transform 1 0 391 0 1 56
+box -35 -56 57 31
+<< labels >>
+rlabel metal1 -26 85 -26 85 4 vdd
+rlabel metal1 -26 2 -26 2 3 gnd
+rlabel metal1 -26 -9 -26 -9 3 P0
+rlabel metal1 -26 -17 -26 -17 3 P1
+rlabel metal1 -26 -25 -26 -25 3 P2
+rlabel metal1 -26 -33 -26 -33 3 P3
+rlabel metal1 -26 -46 -26 -46 3 C0
+rlabel metal1 -26 -54 -26 -54 3 C1
+rlabel metal1 -26 -62 -26 -62 3 C2
+rlabel metal1 -26 -70 -26 -70 2 C3
+rlabel metal1 484 39 484 39 7 S3
+rlabel metal1 484 51 484 51 7 S2
+rlabel metal1 484 59 484 59 7 S1
+rlabel metal1 484 67 484 67 7 S0
+<< end >>

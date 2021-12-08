@@ -1,0 +1,49 @@
+timestamp 1638770576
+version 8.2
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "a_24_n25#" 13 0 24 -25 ndif 32 24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_14_n25#" 13 0 14 -25 ndif 32 24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd" 42 244.764 6 -25 ndc 44 38 0 0 0 0 0 0 0 0 0 0 0 0 312 164 0 0 0 0 0 0 0 0 0 0
+node "out" 21 90.2292 51 -25 ndif 20 18 40 26 0 0 0 0 0 0 0 0 0 0 180 98 0 0 0 0 0 0 0 0 0 0
+node "vdd" 78 148.483 6 6 pdc 0 0 152 86 0 0 0 0 0 0 0 0 0 0 416 216 0 0 0 0 0 0 0 0 0 0
+node "nandout" 229 297.653 14 6 pdif 24 20 112 60 0 0 0 0 0 0 106 102 0 0 328 172 0 0 0 0 0 0 0 0 0 0
+node "C" 174 272.206 28 -18 pc 0 0 0 0 0 0 0 0 0 0 106 102 0 0 128 72 0 0 0 0 0 0 0 0 0 0
+node "B" 174 246.066 18 -11 pc 0 0 0 0 0 0 0 0 0 0 106 102 0 0 88 52 0 0 0 0 0 0 0 0 0 0
+node "A" 173 199.581 8 -4 pc 0 0 0 0 0 0 0 0 0 0 106 102 0 0 48 32 0 0 0 0 0 0 0 0 0 0
+node "w_0_0#" 2880 1245.46 0 0 nw 0 0 0 0 1240 164 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "gnd" "out" 82.476
+cap "B" "A" 264.186
+cap "C" "w_0_0#" 64.77
+cap "nandout" "vdd" 357.396
+cap "A" "nandout" 41.238
+cap "B" "w_0_0#" 64.77
+cap "A" "vdd" 27.492
+cap "w_0_0#" "nandout" 149.375
+cap "C" "gnd" 54.984
+cap "w_0_0#" "vdd" 136.973
+cap "A" "w_0_0#" 85.114
+cap "gnd" "nandout" 82.476
+cap "out" "nandout" 54.984
+cap "out" "vdd" 109.968
+cap "C" "B" 401.646
+cap "C" "nandout" 117.81
+cap "out" "w_0_0#" 37.6416
+cap "B" "nandout" 159.048
+cap "C" "A" 76.572
+fet nfet 49 -25 50 -24 8 12 "Gnd!" "nandout" 4 0 "gnd" 4 0 "out" 4 0
+fet nfet 32 -25 33 -24 8 12 "Gnd!" "C" 4 0 "a_24_n25#" 4 0 "nandout" 4 0
+fet nfet 22 -25 23 -24 8 12 "Gnd!" "B" 4 0 "a_14_n25#" 4 0 "a_24_n25#" 4 0
+fet nfet 12 -25 13 -24 8 12 "Gnd!" "A" 4 0 "gnd" 4 0 "a_14_n25#" 4 0
+fet pfet 49 6 50 7 16 20 "w_0_0#" "nandout" 4 0 "vdd" 8 0 "out" 8 0
+fet pfet 32 6 33 7 16 20 "w_0_0#" "C" 4 0 "vdd" 8 0 "nandout" 8 0
+fet pfet 22 6 23 7 16 20 "w_0_0#" "B" 4 0 "nandout" 8 0 "vdd" 8 0
+fet pfet 12 6 13 7 16 20 "w_0_0#" "A" 4 0 "vdd" 8 0 "nandout" 8 0
+subcap "gnd" -51.087
+subcap "out" -4.5312
+subcap "vdd" -48.081
+subcap "C" -3.2676
+subcap "B" -3.2676
+subcap "A" -2.2656

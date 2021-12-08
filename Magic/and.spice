@@ -1,0 +1,57 @@
+* SPICE3 file created from and.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.option scale=0.09u
+.global vdd gnd
+
+Vdd vdd gnd SUPPLY
+Va A gnd pulse 0 1.8 0ns 0.1ns 0.1ns 9.9ns 20ns
+Vb B gnd pulse 0 1.8 0ns 0.1ns 0.1ns 19.9ns 40ns
+
+
+M1000 andout a_13_9# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=40 ps=36
+M1001 vdd B a_13_9# w_0_3# CMOSP w=8 l=2
++  ad=120 pd=78 as=64 ps=32
+M1002 a_13_9# B a_13_n16# Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=32 ps=24
+M1003 a_13_9# A vdd w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1004 a_13_n16# A gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 andout a_13_9# vdd w_0_3# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+C0 w_0_3# andout 0.03fF
+C1 A vdd 0.02fF
+C2 w_0_3# a_13_9# 0.09fF
+C3 A B 0.24fF
+C4 A a_13_9# 0.04fF
+C5 vdd andout 0.11fF
+C6 a_13_9# vdd 0.21fF
+C7 B a_13_9# 0.21fF
+C8 a_13_9# andout 0.05fF
+C9 B gnd 0.05fF
+C10 andout gnd 0.08fF
+C11 a_13_9# gnd 0.08fF
+C12 w_0_3# A 0.06fF
+C13 w_0_3# vdd 0.13fF
+C14 w_0_3# B 0.06fF
+C15 gnd Gnd 0.16fF
+C16 andout Gnd 0.06fF
+C17 vdd Gnd 0.08fF
+C18 a_13_9# Gnd 0.25fF
+C19 B Gnd 0.20fF
+C20 A Gnd 0.18fF
+C21 w_0_3# Gnd 1.00fF
+
+.tran 0.1n 80n
+
+.control
+run
+plot v(A)
+plot v(B)
+
+plot  v(andout)
+
+.endc
+.end

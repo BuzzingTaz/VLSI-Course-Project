@@ -1,0 +1,196 @@
+* SPICE3 file created from PG.ext - technology: scmos
+
+.include TSMC_180nm.txt
+.param SUPPLY=1.8
+.option scale=0.09u
+.global vdd gnd
+
+Vdd vdd gnd SUPPLY
+vA0 A0 gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vA1 A1 gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vA2 A2 gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vA3 A3 gnd pulse 0 1.8 0us 100ps 100ps 9.9us 20us
+vB0 B0 gnd pulse 0 1.8 0us 100ps 100ps 19.8us 40us
+vB1 B1 gnd pulse 0 1.8 0us 100ps 100ps 19.8us 40us
+vB2 B2 gnd pulse 0 1.8 0us 100ps 100ps 19.8us 40us
+vB3 B3 gnd pulse 0 1.8 0us 100ps 100ps 19.8us 40us
+vC0 C0 gnd pulse 0 1.8 0us 100ps 100ps 19.6us 40us
+
+M1000 G0 and_0/a_13_9# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=544 ps=464
+M1001 vdd B0 and_0/a_13_9# and_0/w_0_3# CMOSP w=8 l=2
++  ad=1120 pd=664 as=64 ps=32
+M1002 and_0/a_13_9# B0 and_0/a_13_n15# Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=32 ps=24
+M1003 and_0/a_13_9# A0 vdd and_0/w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1004 and_0/a_13_n15# A0 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 G0 and_0/a_13_9# vdd and_0/w_0_3# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1006 G2 and_2/a_13_9# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1007 vdd B2 and_2/a_13_9# and_2/w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1008 and_2/a_13_9# B2 and_2/a_13_n15# Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=32 ps=24
+M1009 and_2/a_13_9# A2 vdd and_2/w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 and_2/a_13_n15# A2 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 G2 and_2/a_13_9# vdd and_2/w_0_3# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1012 G1 and_1/a_13_9# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1013 vdd B1 and_1/a_13_9# and_1/w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1014 and_1/a_13_9# B1 and_1/a_13_n15# Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=32 ps=24
+M1015 and_1/a_13_9# A1 vdd and_1/w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1016 and_1/a_13_n15# A1 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1017 G1 and_1/a_13_9# vdd and_1/w_0_3# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1018 G3 and_3/a_13_9# gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1019 vdd B3 and_3/a_13_9# and_3/w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1020 and_3/a_13_9# B3 and_3/a_13_n15# Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=32 ps=24
+M1021 and_3/a_13_9# A3 vdd and_3/w_0_3# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1022 and_3/a_13_n15# A3 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1023 G3 and_3/a_13_9# vdd and_3/w_0_3# CMOSP w=8 l=2
++  ad=40 pd=26 as=0 ps=0
+M1024 xor_0/Bbar B0 vdd xor_0/w_n35_0# CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1025 xor_0/Bbar B0 gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1026 P0 B0 xor_0/a_15_n48# Gnd CMOSN w=4 l=2
++  ad=32 pd=24 as=32 ps=24
+M1027 vdd A0 xor_0/a_7_6# xor_0/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=160 ps=88
+M1028 xor_0/a_15_n48# A0 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1029 xor_0/Abar A0 gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1030 xor_0/a_7_6# xor_0/Bbar P0 xor_0/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1031 P0 xor_0/Abar xor_0/a_7_6# xor_0/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1032 xor_0/Abar A0 vdd xor_0/w_n35_0# CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1033 gnd xor_0/Bbar xor_0/a_35_n48# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1034 xor_0/a_7_6# B0 vdd xor_0/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1035 xor_0/a_35_n48# xor_0/Abar P0 Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1036 xor_1/Bbar B1 vdd xor_1/w_n35_0# CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1037 xor_1/Bbar B1 gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1038 P1 B1 xor_1/a_15_n48# Gnd CMOSN w=4 l=2
++  ad=32 pd=24 as=32 ps=24
+M1039 vdd A1 xor_1/a_7_6# xor_1/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=160 ps=88
+M1040 xor_1/a_15_n48# A1 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1041 xor_1/Abar A1 gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1042 xor_1/a_7_6# xor_1/Bbar P1 xor_1/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1043 P1 xor_1/Abar xor_1/a_7_6# xor_1/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1044 xor_1/Abar A1 vdd xor_1/w_n35_0# CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1045 gnd xor_1/Bbar xor_1/a_35_n48# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1046 xor_1/a_7_6# B1 vdd xor_1/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1047 xor_1/a_35_n48# xor_1/Abar P1 Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1048 xor_2/Bbar B2 vdd xor_2/w_n35_0# CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1049 xor_2/Bbar B2 gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1050 P2 B2 xor_2/a_15_n48# Gnd CMOSN w=4 l=2
++  ad=32 pd=24 as=32 ps=24
+M1051 vdd A2 xor_2/a_7_6# xor_2/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=160 ps=88
+M1052 xor_2/a_15_n48# A2 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1053 xor_2/Abar A2 gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1054 xor_2/a_7_6# xor_2/Bbar P2 xor_2/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1055 P2 xor_2/Abar xor_2/a_7_6# xor_2/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1056 xor_2/Abar A2 vdd xor_2/w_n35_0# CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1057 gnd xor_2/Bbar xor_2/a_35_n48# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1058 xor_2/a_7_6# B2 vdd xor_2/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1059 xor_2/a_35_n48# xor_2/Abar P2 Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1060 xor_3/Bbar B3 vdd xor_3/w_n35_0# CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1061 xor_3/Bbar B3 gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1062 P3 B3 xor_3/a_15_n48# Gnd CMOSN w=4 l=2
++  ad=32 pd=24 as=32 ps=24
+M1063 vdd A3 xor_3/a_7_6# xor_3/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=160 ps=88
+M1064 xor_3/a_15_n48# A3 gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1065 xor_3/Abar A3 gnd Gnd CMOSN w=4 l=2
++  ad=24 pd=20 as=0 ps=0
+M1066 xor_3/a_7_6# xor_3/Bbar P3 xor_3/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=64 ps=32
+M1067 P3 xor_3/Abar xor_3/a_7_6# xor_3/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1068 xor_3/Abar A3 vdd xor_3/w_n35_0# CMOSP w=8 l=2
++  ad=48 pd=28 as=0 ps=0
+M1069 gnd xor_3/Bbar xor_3/a_35_n48# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=32 ps=24
+M1070 xor_3/a_7_6# B3 vdd xor_3/w_n35_0# CMOSP w=8 l=2
++  ad=0 pd=0 as=0 ps=0
+M1071 xor_3/a_35_n48# xor_3/Abar P3 Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 A2 A1 2.04fF
+C1 B3 B2 3.67fF
+C2 B2 B1 2.17fF
+C3 C0 A3 3.80fF
+C4 A3 A2 3.54fF
+C5 gnd Gnd 4.53fF
+C6 vdd Gnd 3.23fF
+C7 A0 Gnd 2.45fF
+C8 B0 Gnd 2.46fF
+
+.tran 10n 80us
+
+.control
+run
+
+plot v(A0)
+
+plot v(A1)
+
+
+plot v(A2)
+plot v(A3)
+
+plot v(P0)
+plot v(P1)
+plot v(P2)
+plot v(P3)
+
+plot v(G0)
+plot v(G1)
+plot v(G2)
+plot v(G3)
+.endc
+.end
